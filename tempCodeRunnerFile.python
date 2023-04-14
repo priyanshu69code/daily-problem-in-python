@@ -1,0 +1,25 @@
+def merege(arr1,arr2,m,n):
+    j = 0
+    k = 0
+    arr = []
+
+    while(j < m and k < n):
+        if arr1[j] < arr2[k]:
+            arr.append(arr1[j])
+            j += 1
+        else:
+            arr.append(arr2[k])
+            k += 1
+    while j < m:
+        arr.append(arr1[j])
+        j += 1
+    while k < n:
+        arr.append(arr2[k])
+        k += 1
+    
+    return arr
+
+
+arr1 = [4,8,9,6,2,7,6]
+arr2 = [9,2,7,6,93,7]
+print(merege(arr1,arr2,len(arr1),len(arr2)))
